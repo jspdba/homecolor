@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -7,17 +7,17 @@
     <meta name="description" content="description">
     <meta name="author" content="wcf">
 
-    <!-- <link rel="icon" href="../../favicon.ico">-->
+   <!-- <link rel="icon" href="../../favicon.ico">-->
 
-    <title><?php echo ($title); ?></title>
+    <title>{$title}</title>
 
     <!-- Bootstrap core CSS -->
     <!--<link href="../../../../Public/css/bootstrap.min.css" rel="stylesheet">-->
-    <link href="/homecolor/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <!--<link href="../../../../Public/css/starter-template.css" rel="stylesheet">-->
-    <link href="/homecolor/Public/css/index/index.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/index/index.css" rel="stylesheet">
 </head>
 
 <body>
@@ -43,40 +43,9 @@
         <p class="lead">这里是说明</p>
     </div>
     <div class=" container">
-        <div class="row">
-            
-    <div id="sidebar" class="col-sm-3">
-        <div class="panel-group" id="group">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-toggle="collapse" data-parent="#group" href="#topic1"><i class="glyphicon glyphicon-list"></i>
-                            分类列表
-                        </a>
-
-                    </h4>
-                </div>
-                <div id="topic1" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                        <ul class=" nav nav-pills nav-stacked">
-                            <li><a href="#">第一个分类</a></li>
-                            <li><a href="#">第二个分类</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-            
-    <div id="content" class="col-sm-8">
         <div class="panel panel-primary">
-            <div class="panel-heading">第一个分类</div>
-            <div class="panel-body"><a href="#">分类软件</a></div>
-        </div>
-    </div>
-
+            <div class="panel-heading">分类标题</div>
+            <div class="panel-body">body</div>
         </div>
     </div>
 </div><!-- /.container -->
@@ -88,7 +57,7 @@
 <!--<script src="../../../../Public/js/jquery.min.js"></script>-->
 <!--<script src="../../../../Public/js/bootstrap.min.js"></script>-->
 
-<script src="/homecolor/Public/js/jquery.min.js"></script>
-<script src="/homecolor/Public/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
 </body>
 </html>
