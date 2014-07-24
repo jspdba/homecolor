@@ -19,3 +19,14 @@ CREATE TABLE IF NOT EXISTS `think_soft` (
   `cid` int(11) unsigned NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+/**
+ * 用户表
+**/
+CREATE TABLE IF NOT EXISTS `think_user` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(64) NOT NULL,
+  `passwd` varchar(64) NOT NULL,
+  `email` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

@@ -1,9 +1,7 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
-
-header("Content-type: text/html; charset=utf-8"); 
-class SoftController extends Controller
+header("Content-type: text/html; charset=utf-8");
+class SoftController extends AdminController
 {
 	/*
 	public function index(){
