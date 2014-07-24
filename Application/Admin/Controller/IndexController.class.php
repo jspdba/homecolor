@@ -17,6 +17,10 @@ class IndexController extends AdminController {
         $this->display();
     }
 
+    public function  sidebar(){
+        $this->display();
+    }
+
     /**
      * 输出变量的内容，通常用于调试
      *

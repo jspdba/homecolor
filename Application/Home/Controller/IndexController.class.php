@@ -7,10 +7,13 @@ class IndexController extends Controller {
     public function index(){
         $title = "欢迎页面，首页";
         $this -> assign("title",$title);
+        $this->sidebar();//引入sidebar
+        $this->display();
+    }
+    private function sidebar(){
         $model=M('Topic');
         $list=$model->select();
-        $this->assign("list",$list);
-        $this->display();
+        $this->assign("topics",$list);
     }
     /**
      * 输出变量的内容，通常用于调试

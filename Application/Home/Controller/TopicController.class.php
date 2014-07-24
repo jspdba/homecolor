@@ -19,6 +19,7 @@ class TopicController extends  Controller {
         }
         $this->display();
     }
+
     public function input(){
         $this->display();
     }

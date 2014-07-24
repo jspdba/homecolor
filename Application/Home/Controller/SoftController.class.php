@@ -31,6 +31,8 @@ class SoftController extends Controller
 		if($list){
 			$this->assign("list",$list);
 		}
+
+        $this->sidebar();
 		$this->display();
 	}
 
@@ -66,6 +68,10 @@ class SoftController extends Controller
 		}
 		$this->error('删除失败'.$entity->getDbError(),'index');
 	}
-	
+    private function sidebar(){
+        $model=M('Topic');
+        $list=$model->select();
+        $this->assign("topics",$list);
+    }
 }
 ?>

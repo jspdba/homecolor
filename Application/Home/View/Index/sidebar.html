@@ -9,7 +9,7 @@
             <div id="collapseOne" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <ul class=" nav nav-pills nav-stacked">
-                        <volist name="list" id="it">
+                        <volist name="topics" id="it">
                             <li><a href="{:U('Home/Soft/index',array('cid'=>$it['id']))}">{$it.name}</a></li>
                         </volist>
                         <!--<li><a href="{:U('Admin/Member/memberList')}">会员列表</a></li>
