@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>soft列表</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="__PUBLIC__/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- include header -->
+    <include file="Menu:header" />
+</head>
+<body>
+
+<div class="container">
+    <?php
+        foreach ($list as $key => $value) {
+            echo "<div class='container'>";
+            echo "<div class='row'>";
+            echo "<div class='col-md-3'>$value[name]</div>";
+            echo "<div class='col-md-3'>$value[url]</div>";
+            echo "<div class='col-md-3'>$value[cname]</div>";
+            echo "<div class='col-md-3'><a href='__URL__/delete?id=".$value[id]."' class='btn btn-primary btn-sm'>删除</a></div>";
+            echo "</div>";
+            echo "</div>";
+         }
+    ?>
+</div>
+<!-- include footer -->
+<include file="Menu:footer" />
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="__PUBLIC__/jquery/2.1.1/jquery.min.js"></script>
+<script src="__PUBLIC__/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
