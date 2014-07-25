@@ -7,7 +7,7 @@
 </block>
 <block name="content">
     <div id="content" class="col-sm-8">
-        <div class="panel panel-primary">
+        <!--<div class="panel panel-primary">
             <div class="panel-heading">分类标题</div>
             <div class="panel-body">body</div>
         </div>
@@ -26,7 +26,24 @@
         <div class="panel panel-danger">
             <div class="panel-heading">分类标题</div>
             <div class="panel-body">body</div>
-        </div>
+        </div>-->
+        <volist name="topics" id="out">
+            <div class="panel panel-primary">
+                <div class="panel-heading">{$out['name']}</div>
+                <div class="panel-body">
+                    <div calss="container">
+                    <volist name="out['added']" id="in">
+                        <div class="row">
+                            <!--<div class="col-lg-3"><a href="{:U('Home/Soft/info?id='.$in['id'])}">{$in['name']}</a></div>-->
+                            <div class="col-lg-3"><a href="{$in['url']}"><i class="glyphicon glyphicon-download-alt"></i>  {$in['name']}</a></div>
+                        </div>
+                    </volist>
+                    </div>
+                </div>
+            </div>
+        </volist>
+
+
     </div>
 </block>
 

@@ -7,13 +7,15 @@ class IndexController extends Controller {
     public function index(){
         $title = "欢迎页面，首页";
         $this -> assign("title",$title);
-        $this->sidebar();//引入sidebar
+        //生成一个二维数组用于页面分类展示
+        $topicModel=M('Topic');
+        $softModel=M('Soft');
+        $topics=$topicModel->select();
+        foreach($topics as $index=>$value){//每个分类显示5条记录
+            $topics[$index]['added']=$softModel->where('cid='.$value['id'])->limit(5)->select();
+        }
+        $this->assign("topics",$topics);
         $this->display();
-    }
-    private function sidebar(){
-        $model=M('Topic');
-        $list=$model->select();
-        $this->assign("topics",$list);
     }
     /**
      * 输出变量的内容，通常用于调试

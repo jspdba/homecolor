@@ -26,9 +26,9 @@ class SoftController extends Controller
 			$where.=" and s.cid=$cid ";
 		}
 		$list=$entity->table('think_topic t,think_soft s')->field("s.id,s.name,s.url,t.name cname")->where($where)->select();
-		#print_r($entity->getLastsql());
-		#dump($list);
 		if($list){
+            $topicName=$list[0]['cname'];
+            $this->assign("topicName",$topicName);
 			$this->assign("list",$list);
 		}
 
@@ -72,6 +72,14 @@ class SoftController extends Controller
         $model=M('Topic');
         $list=$model->select();
         $this->assign("topics",$list);
+    }
+    //详细信息页面
+    public function info(){
+        $id=I('id');
+        $soft=M('Soft');
+        $info=$soft->where('id='.$id)->find;
+        $this->assign("info",info);
+        $this->display();
     }
 }
 ?>
