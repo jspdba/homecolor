@@ -1,0 +1,47 @@
+<extend name="Index:base" />
+<block name="title"><title>{$title}</title></block>
+<block name="content">
+    <div class="container">
+        <empty name="soft">
+            <form role="form" action="{:U('Admin/Topic/add')}" method="post">
+                <div class="form-group">
+                    <label for="name">名称</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="软件名称">
+                </div>
+                <div class="form-group">
+                    <label for="url">软件地址</label>
+                    <input type="url" class="form-control" id="url" name="url" placeholder="软件连接地址">
+                </div>
+                <select class="form-control">
+                    <volist name="topics" id="it" key="k">
+                        <option value="{$k}">{$it.name}</option>
+                    </volist>
+                </select>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        <else />
+            <form role="form" action="{:U('Admin/Topic/update')}" method="post">
+                <input type="hidden" name="id" id="id" value="{$topic['id']}">
+                <div class="form-group">
+                    <label for="name">名称</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="软件名称" value="{$topic['name']}">
+                </div>
+                <div class="form-group">
+                    <label for="url">软件地址</label>
+                    <input type="url" class="form-control" id="url" name="url" placeholder="软件连接地址" value="{$topic['url']}">
+                </div>
+                <select class="form-control">
+                    <volist name="topics" id="it" key="k">
+                        <if condition="$k eq $topic['cname']">
+                            <option value="{$k}" selected>{$it.name}</option>
+                        <else />
+                            <option value="{$k}">{$it.name}</option>
+                        </if>
+                    </volist>
+                </select>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </empty>
+    </div>
+    </div>
+</block>

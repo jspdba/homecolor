@@ -8,16 +8,14 @@ class IndexController extends AdminController {
 //        $this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px }</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>[ 您现在访问的是Home模块的Index控制器 ]</div><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
         $title = "后台管理-->首页";
         $this -> assign("title",$title);
-        $model=M('Topic');
-        $list=$model->select();
-        $this->assign("list",$list);
-        $this->display();
-    }
-    public function  add(){
-        $this->display();
-    }
-
-    public function  sidebar(){
+        //生成一个二维数组用于页面分类展示
+        $topicModel=M('Topic');
+        $softModel=M('Soft');
+        $topics=$topicModel->select();
+        foreach($topics as $index=>$value){//每个分类显示5条记录
+            $topics[$index]['added']=$softModel->where('cid='.$value['id'])->limit(5)->select();
+        }
+        $this->assign("topics",$topics);
         $this->display();
     }
 

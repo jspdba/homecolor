@@ -27,42 +27,37 @@ class SoftController extends AdminController
 		#print_r($entity->getLastsql());
 		#dump($list);
 		if($list){
-			$this->assign("list",$list);
+			$this->assign("softs",$list);
 		}
 		$this->display();
 	}
-
-	public function insert(){
-//		$entity=M('Soft','think_','DB_CONFIG');
-		$entity=M('Soft');
-		if($entity->create($_POST,1)){
-			if($result=$entity->add()){
-				$this->success('新增成功', 'index');
-			}
-		}
-		$this->error('新增失败,'.$entity->getDbError(),true);
-	}
+    public function input(){
+        $topicModel=M('Topic');
+        $topics=$topicModel->select();
+        if($topics){
+            $this->assign("topics",$topics);
+        }
+        $this->display();
+    }
 	//稍后改名为input
 	public function add(){
-		$entity=M('Topic');
-		#$result=$entity->where("id=1 ")->find();//只查询一条
-		$list=$entity->field("id,name")->select();
-
-		if($list){
-			#dump($list);
-			$this->assign("list",$list);
-		}else{
-			print_r($entity->getDbError());
-		}
-		$this->display();
+        $entity=M('Soft','think_','DB_CONFIG');
+        $entity=M('Soft');
+        if($entity->create($_POST,1)){
+            if($result=$entity->add()){
+                $this->success('新增成功', U('Soft/index'));
+            }
+        }
+        $this->error('新增失败,'.$entity->getDbError(),U('Soft/index'));
 	}
 	public function delete(){
 		$entity=M('Soft');
 		$id=I("id");
 		if($ct=$entity->delete($id)){
-			$this->success('删除成功!'.'删除'.$ct.'条', 'index');
-		}
-		$this->error('删除失败'.$entity->getDbError(),'index');
+			$this->success('删除成功!'.'删除'.$ct.'条',U('Soft/index'));
+		}else{
+		    $this->error('删除失败'.$entity->getDbError(),U('Soft/index'));
+        }
 	}
 	
 }

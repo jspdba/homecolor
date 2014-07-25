@@ -21,21 +21,19 @@
         ?>
     </div>-->
     <div id="content" class="col-sm-8">
-        <div class='container'>
-            <div class="panel panel-primary">
-                <div class="panel-heading">{$topicName}</div>
-                <div class="panel-body">
-                    <div calss="container">
-                        <volist name="list" id="it">
-                            <div class="row">
-                                <div class="col-lg-3"><a href="{$it['url']}"><i class="glyphicon glyphicon-download-alt"></i>  {$it['name']}</a></div>
-                            </div>
-                        </volist>
-                    </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">{$topicName}</div>
+            <div class="panel-body">
+                <div calss="container">
+                    <volist name="list" id="it">
+                        <div class="row">
+                            <div class="col-lg-3"><a href="{$it['url']}"><i class="glyphicon glyphicon-download-alt"></i>  {$it['name']}</a></div>
+                        </div>
+                    </volist>
                 </div>
             </div>
         </div>
-    </div>
+     </div>
 </block>
 
 </div>
