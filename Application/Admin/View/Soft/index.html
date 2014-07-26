@@ -10,14 +10,15 @@
             </div>
             <table class="table table-bordered table-condensed">
                 <tr>
-                    <th>序号</th><th>名称</th><th>类别</th></th><th>操作</th>
+                    <th>序号</th><th>名称</th><th>类别</th></th><th colspan="2">操作</th>
                 </tr>
-                <volist name="softs" id="it">
+                <volist name="softs" id="it" key="i">
                     <tr>
-                        <td>{$it.id}</td>
-                        <td><a href="{:U('Admin/Soft/index?id='.$it['id'])}">{$it.name}</td>
+                        <td>{$i}</td>
+                        <td><a href="{$it['url']}" target="_blank">{$it.name}</td>
                         <td><a href="{:U('Admin/Topic/index?id='.$it['id'])}">{$it.cname}</a></td>
                         <td><a href="{:U('Admin/Soft/delete?id='.$it['id'])}"><i class="glyphicon glyphicon-check"></i> 删除</a></td>
+                        <td><a href="{:U('Admin/Soft/input?id='.$it['id'])}"><i class="glyphicon glyphicon-check"></i> 修改</a></td>
                     </tr>
                 </volist>
             </table>

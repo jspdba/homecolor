@@ -12,10 +12,11 @@
                 <div class="panel-heading">{$out['name']}</div>
                 <div class="panel-body">
                     <div calss="container">
-                    <volist name="out['added']" id="in">
+                    <volist name="out['added']" id="in" key="i">
                         <div class="row">
                             <!--<div class="col-lg-3"><a href="{:U('Home/Soft/info?id='.$in['id'])}">{$in['name']}</a></div>-->
-                            <div class="col-lg-3"><a href="{$in['url']}"><i class="glyphicon glyphicon-download-alt"></i>  {$in['name']}</a></div>
+                            <div class="col-sm-1"><a href="{$in['url']}" target="_blank">{$i}</a></div>
+                            <div class="col-lg-3"><a href="{$in['url']}" target="_blank"><i class="glyphicon glyphicon-download-alt"></i>  {$in['name']}</a></div>
                         </div>
                     </volist>
                     </div>

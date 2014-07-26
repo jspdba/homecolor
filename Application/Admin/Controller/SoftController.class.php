@@ -32,6 +32,14 @@ class SoftController extends AdminController
 		$this->display();
 	}
     public function input(){
+        //修改前先查询
+        $id=I('id');
+        $softModel=M('Soft');
+        $soft=$softModel->find($id);
+        if($soft){
+            $this->assign("soft",$soft);
+        }
+        //分类（下拉）
         $topicModel=M('Topic');
         $topics=$topicModel->select();
         if($topics){
@@ -41,7 +49,7 @@ class SoftController extends AdminController
     }
 	//稍后改名为input
 	public function add(){
-        $entity=M('Soft','think_','DB_CONFIG');
+//        $entity=M('Soft','think_','DB_CONFIG');
         $entity=M('Soft');
         if($entity->create($_POST,1)){
             if($result=$entity->add()){
@@ -59,6 +67,15 @@ class SoftController extends AdminController
 		    $this->error('删除失败'.$entity->getDbError(),U('Soft/index'));
         }
 	}
-	
+    public function update(){
+        if (IS_POST){
+            $Topic = M('Soft');
+            $Topic->create();
+            $Topic->save();
+            $this->success('保存完成',U('Admin/Soft/index'));
+        }else{
+            $this->error('非法请求',U('Admin/Soft/index'));
+        }
+    }
 }
 ?>
