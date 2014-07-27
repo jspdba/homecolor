@@ -1,0 +1,27 @@
+<extend name="Index:base" />
+<block name="title"><title>{$title}</title></block>
+<block name="content">
+    <div class="container">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">__URL__</div>
+            <div class="panel-body">
+                <p>分类展示页面，可以查看，修改，删除分类</p>
+            </div>
+            <table class="table table-bordered table-condensed">
+                <tr>
+                    <th>序号</th><th>名称</th><th colspan="2">操作</th>
+                </tr>
+                <volist name="topics" id="it">
+                    <tr>
+                        <td>{$it.id}</td>
+                        <td>{$it.name}</td>
+                        <td><a href="{:U('Admin/Topic/delete?id='.$it['id'])}"><i class="glyphicon glyphicon-check"></i> 删除</a></td>
+                        <td><a href="{:U('Admin/Topic/input?id='.$it['id'])}"><i class="glyphicon glyphicon-check"></i> 修改</a></td>
+                    </tr>
+                </volist>
+            </table>
+            </div>
+        </div>
+    </div>
+</block>

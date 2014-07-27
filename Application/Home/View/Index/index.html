@@ -1,35 +1,30 @@
 <extend name="Index:base" />
+
 <block name="title"><title>{$title}</title></block>
 <block name="sidebar">
-    <div id="sidebar" class="col-sm-3">
-        <div class="panel-group" id="group">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-toggle="collapse" data-parent="#group" href="#topic1"><i class="glyphicon glyphicon-list"></i>
-                            分类列表
-                        </a>
+    <include file="Index/sidebar" />
 
-                    </h4>
-                </div>
-                <div id="topic1" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                        <ul class=" nav nav-pills nav-stacked">
-                            <li><a href="#">第一个分类</a></li>
-                            <li><a href="#">第二个分类</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
 </block>
 <block name="content">
     <div id="content" class="col-sm-8">
-        <div class="panel panel-primary">
-            <div class="panel-heading">第一个分类</div>
-            <div class="panel-body"><a href="#">分类软件</a></div>
-        </div>
+        <volist name="topics" id="out">
+            <div class="panel panel-primary">
+                <div class="panel-heading">{$out['name']}</div>
+                <div class="panel-body">
+                    <div calss="container">
+                    <volist name="out['added']" id="in" key="i">
+                        <div class="row">
+                            <!--<div class="col-lg-3"><a href="{:U('Home/Soft/info?id='.$in['id'])}">{$in['name']}</a></div>-->
+                            <div class="col-sm-1"><a href="{$in['url']}" target="_blank">{$i}</a></div>
+                            <div class="col-lg-3"><a href="{$in['url']}" target="_blank"><i class="glyphicon glyphicon-download-alt"></i>  {$in['name']}</a></div>
+                        </div>
+                    </volist>
+                    </div>
+                </div>
+            </div>
+        </volist>
+
+
     </div>
 </block>
+

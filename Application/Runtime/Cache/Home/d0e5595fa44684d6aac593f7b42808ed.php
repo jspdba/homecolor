@@ -76,24 +76,23 @@
     </div>
 </div>
 
-
         
+<!--    <div id="content" class="col-sm-8">
+        <?php
+ foreach ($list as $key => $value) { echo "<div class='container'>"; echo "<div class='row'>"; echo "<div class='col-md-3'>$value[name]</div>"; echo "<div class='col-md-3'>$value[url]</div>"; echo "<div class='col-md-3'>$value[cname]</div>"; echo "</div>"; echo "</div>"; } ?>
+    </div>-->
     <div id="content" class="col-sm-8">
-        <?php if(is_array($topics)): $i = 0; $__LIST__ = $topics;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$out): $mod = ($i % 2 );++$i;?><div class="panel panel-primary">
-                <div class="panel-heading"><?php echo ($out['name']); ?></div>
-                <div class="panel-body">
-                    <div calss="container">
-                    <?php if(is_array($out['added'])): $i = 0; $__LIST__ = $out['added'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$in): $mod = ($i % 2 );++$i;?><div class="row">
-                            <!--<div class="col-lg-3"><a href="<?php echo U('Home/Soft/info?id='.$in['id']);?>"><?php echo ($in['name']); ?></a></div>-->
-                            <div class="col-sm-1"><a href="<?php echo ($in['url']); ?>" target="_blank"><?php echo ($i); ?></a></div>
-                            <div class="col-lg-3"><a href="<?php echo ($in['url']); ?>" target="_blank"><i class="glyphicon glyphicon-download-alt"></i>  <?php echo ($in['name']); ?></a></div>
+        <div class="panel panel-primary">
+            <div class="panel-heading"><?php echo ($topicName); ?></div>
+            <div class="panel-body">
+                <div calss="container">
+                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$it): $mod = ($i % 2 );++$i;?><div class="row">
+                            <div class="col-lg-3"><a href="<?php echo ($it['url']); ?>"><i class="glyphicon glyphicon-download-alt"></i>  <?php echo ($it['name']); ?></a></div>
                         </div><?php endforeach; endif; else: echo "" ;endif; ?>
-                    </div>
                 </div>
-            </div><?php endforeach; endif; else: echo "" ;endif; ?>
-
-
-    </div>
+            </div>
+        </div>
+     </div>
 
     </div>
 </div><!-- /.container -->

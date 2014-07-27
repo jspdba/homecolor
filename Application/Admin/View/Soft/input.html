@@ -1,0 +1,48 @@
+<extend name="Index:base" />
+<block name="title"><title>{$title}</title></block>
+<block name="content">
+    <div class="container">
+        <empty name="soft">
+            <form role="form" action="{:U('Admin/Soft/add')}" method="post">
+                <div class="form-group">
+                    <label for="name">名称</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="软件名称">
+                </div>
+                <div class="form-group">
+                    <label for="url">软件地址</label>
+                    <input type="url" class="form-control" id="url" name="url" placeholder="软件连接地址">
+                </div>
+                <select class="form-control" name="cid">
+                    <volist name="topics" id="it" key="k">
+                        <option value="{$it.id}">{$it.name}</option>
+                    </volist>
+                </select>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        <else />
+            <form role="form" action="{:U('Admin/Soft/update')}" method="post">
+                <input type="hidden" name="id" id="id" value="{$soft['id']}">
+                <div class="form-group">
+                    <label for="name">名称</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="软件名称" value="{$soft['name']}">
+                </div>
+                <div class="form-group">
+                    <label for="url">软件地址</label>
+                    <input type="url" class="form-control" id="url" name="url" placeholder="软件连接地址" value="{$soft['url']}">
+                </div>
+                <select class="form-control">
+                    <volist name="topics" id="it">
+                        <if condition="$it['id'] eq $soft['cid']">
+                            <option value="{$it['id']}" selected="selected">{$it.name}</option>
+                        <else />
+                            <option value="{$it['id']}">{$it.name}</option>
+                        </if>
+                    </volist>
+                </select>
+                <button type="submit" class="btn btn-default">提交</button>
+                <button type="reset" class="btn btn-default">取消</button>
+            </form>
+        </empty>
+    </div>
+    </div>
+</block>
