@@ -60,13 +60,13 @@
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="glyphicon glyphicon-user"></i> 分类列表</a>
+                    <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="glyphicon glyphicon-list-alt"></i> <?php echo L('topics');?></a>
                 </h4>
             </div>
             <div id="collapseOne" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <ul class=" nav nav-pills nav-stacked">
-                        <?php if(is_array($topics)): $i = 0; $__LIST__ = $topics;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$it): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Home/Soft/index',array('cid'=>$it['id']));?>"><?php echo ($it["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <?php if(is_array($topics)): $i = 0; $__LIST__ = $topics;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$it): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Home/Soft/index',array('cid'=>$it['id']));?>"><i class="glyphicon glyphicon glyphicon-link"></i> <?php echo ($it["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                         <!--<li><a href="<?php echo U('Admin/Member/memberList');?>">会员列表</a></li>
                         <li><a href="<?php echo U('Admin/Member/memberAdd');?>">添加会员</a></li>-->
                     </ul>
@@ -87,7 +87,7 @@
             <div class="panel-body">
                 <div calss="container">
                     <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$it): $mod = ($i % 2 );++$i;?><div class="row">
-                            <div class="col-lg-3"><a href="<?php echo ($it['url']); ?>"><i class="glyphicon glyphicon-download-alt"></i>  <?php echo ($it['name']); ?></a></div>
+                            <div class="col-lg-3"><a href="<?php echo ($it['url']); ?>"><i class="glyphicon glyphicon-floppy-save"></i>  <?php echo ($it['name']); ?></a></div>
                         </div><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
             </div>

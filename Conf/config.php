@@ -10,7 +10,6 @@ return $arrayName = array(
     'DB_PREFIX' => 'think_', // 数据库表前缀
     'DB_CHARSET' => 'utf8', // 数据库的编码 默认为utf8
 
-
     //显示调试信息
     'SHOW_PAGE_TRACE'=>true,
 );

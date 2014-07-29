@@ -60,13 +60,13 @@
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="glyphicon glyphicon-user"></i> 分类列表</a>
+                    <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="glyphicon glyphicon-list-alt"></i> <?php echo L('topics');?></a>
                 </h4>
             </div>
             <div id="collapseOne" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <ul class=" nav nav-pills nav-stacked">
-                        <?php if(is_array($topics)): $i = 0; $__LIST__ = $topics;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$it): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Home/Soft/index',array('cid'=>$it['id']));?>"><?php echo ($it["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <?php if(is_array($topics)): $i = 0; $__LIST__ = $topics;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$it): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Home/Soft/index',array('cid'=>$it['id']));?>"><i class="glyphicon glyphicon glyphicon-link"></i> <?php echo ($it["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                         <!--<li><a href="<?php echo U('Admin/Member/memberList');?>">会员列表</a></li>
                         <li><a href="<?php echo U('Admin/Member/memberAdd');?>">添加会员</a></li>-->
                     </ul>
@@ -79,25 +79,76 @@
 
         
     <div id="content" class="col-sm-8">
-        <?php if(is_array($topics)): $i = 0; $__LIST__ = $topics;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$out): $mod = ($i % 2 );++$i;?><div class="panel panel-primary">
+        <!--<?php if(is_array($topics)): $i = 0; $__LIST__ = $topics;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$out): $mod = ($i % 2 );++$i;?><div class="panel panel-primary">
                 <div class="panel-heading"><?php echo ($out['name']); ?></div>
                 <div class="panel-body">
                     <div calss="container">
                     <?php if(is_array($out['added'])): $i = 0; $__LIST__ = $out['added'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$in): $mod = ($i % 2 );++$i;?><div class="row">
-                            <!--<div class="col-lg-3"><a href="<?php echo U('Home/Soft/info?id='.$in['id']);?>"><?php echo ($in['name']); ?></a></div>-->
+                            &lt;!&ndash;<div class="col-lg-3"><a href="<?php echo U('Home/Soft/info?id='.$in['id']);?>"><?php echo ($in['name']); ?></a></div>&ndash;&gt;
                             <div class="col-sm-1"><a href="<?php echo ($in['url']); ?>" target="_blank"><?php echo ($i); ?></a></div>
-                            <div class="col-lg-3"><a href="<?php echo ($in['url']); ?>" target="_blank"><i class="glyphicon glyphicon-download-alt"></i>  <?php echo ($in['name']); ?></a></div>
+                            <div class="col-lg-3"><a href="<?php echo ($in['url']); ?>" target="_blank"><i class="glyphicon glyphicon-floppy-save"></i>  <?php echo ($in['name']); ?></a></div>
                         </div><?php endforeach; endif; else: echo "" ;endif; ?>
                     </div>
                 </div>
+            </div><?php endforeach; endif; else: echo "" ;endif; ?>-->
+        <?php if(is_array($topics)): $i = 0; $__LIST__ = $topics;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$out): $mod = ($i % 2 );++$i;?><div class="panel panel-primary">
+                <div class="panel-heading"><?php echo ($out['name']); ?></div>
+                <div class="panel-body">
+                    <table class="table table-hover table-bordered table-condensed">
+                        <tr>
+                            <th><?php echo L('xuhao');?></th>
+                            <th><?php echo L('name');?></th>
+                        </tr>
+                        <?php if(is_array($out['added'])): $i = 0; $__LIST__ = $out['added'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$in): $mod = ($i % 2 );++$i;?><tr>
+                                <td><a href="<?php echo ($in['url']); ?>" target="_blank"><?php echo ($i); ?></a></td>
+                                <td><a href="<?php echo ($in['url']); ?>" target="_blank"><i class="glyphicon glyphicon-floppy-save"></i>  <?php echo ($in['name']); ?></a></td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </table>
+                </div>
             </div><?php endforeach; endif; else: echo "" ;endif; ?>
-
-
     </div>
 
     </div>
 </div><!-- /.container -->
 
+<style type="text/css">
+    html,
+    body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+    }
+
+    /* Wrapper for page content to push down footer */
+    #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+    }
+
+    #footer {
+        height: 60px;
+    }
+    #footer {
+        background-color: #f5f5f5;
+    }
+
+    /* Lastly, apply responsive CSS fixes as necessary */
+    @media (max-width: 767px) {
+        #footer {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+</style>
+        <div id="footer">
+            <div class="container">
+            <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+            </div>
+        </div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

@@ -7,24 +7,41 @@
 </block>
 <block name="content">
     <div id="content" class="col-sm-8">
-        <volist name="topics" id="out">
+        <!--<volist name="topics" id="out">
             <div class="panel panel-primary">
                 <div class="panel-heading">{$out['name']}</div>
                 <div class="panel-body">
                     <div calss="container">
                     <volist name="out['added']" id="in" key="i">
                         <div class="row">
-                            <!--<div class="col-lg-3"><a href="{:U('Home/Soft/info?id='.$in['id'])}">{$in['name']}</a></div>-->
+                            &lt;!&ndash;<div class="col-lg-3"><a href="{:U('Home/Soft/info?id='.$in['id'])}">{$in['name']}</a></div>&ndash;&gt;
                             <div class="col-sm-1"><a href="{$in['url']}" target="_blank">{$i}</a></div>
-                            <div class="col-lg-3"><a href="{$in['url']}" target="_blank"><i class="glyphicon glyphicon-download-alt"></i>  {$in['name']}</a></div>
+                            <div class="col-lg-3"><a href="{$in['url']}" target="_blank"><i class="glyphicon glyphicon-floppy-save"></i>  {$in['name']}</a></div>
                         </div>
                     </volist>
                     </div>
                 </div>
             </div>
+        </volist>-->
+        <volist name="topics" id="out">
+            <div class="panel panel-primary">
+                <div class="panel-heading">{$out['name']}</div>
+                <div class="panel-body">
+                    <table class="table table-hover table-bordered table-condensed">
+                        <tr>
+                            <th>{:L('xuhao')}</th>
+                            <th>{:L('name')}</th>
+                        </tr>
+                        <volist name="out['added']" id="in" key="i">
+                            <tr>
+                                <td><a href="{$in['url']}" target="_blank">{$i}</a></td>
+                                <td><a href="{$in['url']}" target="_blank"><i class="glyphicon glyphicon-floppy-save"></i>  {$in['name']}</a></td>
+                            </tr>
+                        </volist>
+                    </table>
+                </div>
+            </div>
         </volist>
-
-
     </div>
 </block>
 
