@@ -18,10 +18,12 @@
     <!-- Custom styles for this template -->
     <!--<link href="../../../../Public/css/starter-template.css" rel="stylesheet">-->
     <link href="/homecolor/Public/css/index/index.css" rel="stylesheet">
+    <link href="/homecolor/Public/css/index/footer.css" rel="stylesheet">
 </head>
 
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <!--导航-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -65,7 +67,8 @@
         </div><!-- /.navbar-collapse -->
     </div>
 </nav>
-
+    <div id="wrap">
+        
     <div class="container">
         <div class="panel panel-default">
             <!-- Default panel contents -->
@@ -89,6 +92,13 @@
     </div>
     </div>
 
+    </div>
+    <!--footer-->
+    <div id="footer">
+    <div class="container">
+        this is a footer ,you can print something here
+    </div>
+</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

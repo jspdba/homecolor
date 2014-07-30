@@ -18,9 +18,12 @@
     <!-- Custom styles for this template -->
     <!--<link href="../../../../Public/css/starter-template.css" rel="stylesheet">-->
     <link href="/homecolor/Public/css/index/index.css" rel="stylesheet">
+    <link href="/homecolor/Public/css/index/footer.css" rel="stylesheet">
+
 </head>
 
 <body>
+<!--导航-->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="collapse navbar-collapse">
@@ -51,10 +54,11 @@
         </div><!-- /.navbar-collapse -->
     </div>
 </nav>
-
-<div class="container">
-    <div class="row">
-        
+<!--页面内容放这里-->
+<div id="wrap">
+    <div class="container">
+        <div class="row">
+            
     <div id="sidebar" class="col-sm-3">
     <div class="panel-group" id="accordion">
         <div class="panel panel-primary">
@@ -76,7 +80,7 @@
     </div>
 </div>
 
-        
+            
 <!--    <div id="content" class="col-sm-8">
         <?php
  foreach ($list as $key => $value) { echo "<div class='container'>"; echo "<div class='row'>"; echo "<div class='col-md-3'>$value[name]</div>"; echo "<div class='col-md-3'>$value[url]</div>"; echo "<div class='col-md-3'>$value[cname]</div>"; echo "</div>"; echo "</div>"; } ?>
@@ -94,9 +98,15 @@
         </div>
      </div>
 
+        </div>
+    </div><!-- /.container -->
+</div> <!--wrap,end-->
+<!--footer-->
+<div id="footer">
+    <div class="container">
+        this is a footer ,you can print something here
     </div>
-</div><!-- /.container -->
-
+</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

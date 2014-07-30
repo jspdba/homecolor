@@ -18,16 +18,19 @@
     <!-- Custom styles for this template -->
     <!--<link href="../../../../Public/css/starter-template.css" rel="stylesheet">-->
     <link href="/homecolor/Public/css/index/index.css" rel="stylesheet">
+    <link href="/homecolor/Public/css/index/footer.css" rel="stylesheet">
+
 </head>
 
 <body>
+<!--导航-->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">logo</a></li>
                 <li><a href="<?php echo U('Home/Index/index');?>"><?php echo L("home");?></a></li>
-                <li><a href="<?php echo U('Admin/Index/index');?>"><?php echo L('manage');?></a></li>
+                <li><a href="<?php echo U('Home/Login/index');?>"><?php echo L('manage');?></a></li>
                 <!--<li><a href="#">设置</a></li>-->
             </ul>
 
@@ -51,10 +54,11 @@
         </div><!-- /.navbar-collapse -->
     </div>
 </nav>
-
-<div class="container">
-    <div class="row">
-        
+<!--页面内容放这里-->
+<div id="wrap">
+    <div class="container">
+        <div class="row">
+            
     <div id="sidebar" class="col-sm-3">
     <div class="panel-group" id="accordion">
         <div class="panel panel-primary">
@@ -77,7 +81,7 @@
 </div>
 
 
-        
+            
     <div id="content" class="col-sm-8">
         <!--<?php if(is_array($topics)): $i = 0; $__LIST__ = $topics;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$out): $mod = ($i % 2 );++$i;?><div class="panel panel-primary">
                 <div class="panel-heading"><?php echo ($out['name']); ?></div>
@@ -108,47 +112,15 @@
             </div><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
 
-    </div>
-</div><!-- /.container -->
-
-<style type="text/css">
-    html,
-    body {
-        height: 100%;
-        /* The html and body elements cannot have any padding or margin. */
-    }
-
-    /* Wrapper for page content to push down footer */
-    #wrap {
-        min-height: 100%;
-        height: auto !important;
-        height: 100%;
-        /* Negative indent footer by it's height */
-        margin: 0 auto -60px;
-    }
-
-    #footer {
-        height: 60px;
-    }
-    #footer {
-        background-color: #f5f5f5;
-    }
-
-    /* Lastly, apply responsive CSS fixes as necessary */
-    @media (max-width: 767px) {
-        #footer {
-            margin-left: -20px;
-            margin-right: -20px;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-    }
-</style>
-        <div id="footer">
-            <div class="container">
-            <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
-            </div>
         </div>
+    </div><!-- /.container -->
+</div> <!--wrap,end-->
+<!--footer-->
+<div id="footer">
+    <div class="container">
+        this is a footer ,you can print something here
+    </div>
+</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

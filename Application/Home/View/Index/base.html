@@ -18,23 +18,28 @@
     <!-- Custom styles for this template -->
     <!--<link href="../../../../Public/css/starter-template.css" rel="stylesheet">-->
     <link href="__PUBLIC__/css/index/index.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/index/footer.css" rel="stylesheet">
+
 </head>
 
 <body>
+<!--导航-->
 <include file="Index:navbar" />
-
-<div class="container">
-    <div class="row">
-        <block name="sidebar">
-            <div id="sidebar" class="col-sm-3">
-        </block>
-        <block name="content">
-            <div id="content" class="col-sm-8">
-            </div>
-        </block>
-    </div>
-</div><!-- /.container -->
-
+<!--页面内容放这里-->
+<div id="wrap">
+    <div class="container">
+        <div class="row">
+            <block name="sidebar">
+                <div id="sidebar" class="col-sm-3">
+            </block>
+            <block name="content">
+                <div id="content" class="col-sm-8">
+                </div>
+            </block>
+        </div>
+    </div><!-- /.container -->
+</div> <!--wrap,end-->
+<!--footer-->
 <include file="Index:footer" />
 <!-- Bootstrap core JavaScript
 ================================================== -->
