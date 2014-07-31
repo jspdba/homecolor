@@ -1,10 +1,12 @@
 <?php
-namespace Admin\Controller;
-
-//use Think\Controller\AdminController;
+namespace Craw\Controller;
+use Think\Controller;
+use Vendor\Snoopy\Snoopy;
 header("Content-type: text/html; charset=utf-8");
-class IndexController extends AdminController {
+
+class IndexController extends Controller {
     public function index(){
+        $snoopy=new Snoopy();
         $this->display();
     }
 
