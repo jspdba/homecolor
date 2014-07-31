@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f37552c1-35f2-466c-a7bd-99e9742eec97" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Craw/e1f1d9de781d698a553c40f5340a8361.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Craw/Controller/IndexController.class.php" afterPath="$PROJECT_DIR$/Application/Craw/Controller/IndexController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Craw/View/Index/index.html" afterPath="$PROJECT_DIR$/Application/Craw/View/Index/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="homecolor.iws" />
@@ -307,7 +304,11 @@
       <created>1406796456067</created>
       <updated>1406796456067</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="comwork">
+      <created>1406797485685</created>
+      <updated>1406797485685</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
