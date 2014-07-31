@@ -22,29 +22,19 @@
 </head>
 
 <body>
-<!--导航-->
-<include file="Index:navbar" />
-<!--页面内容放这里-->
-<div id="wrap">
-    <div class="container">
-        <div class="row">
-            <block name="sidebar">
-                <div id="sidebar" class="col-sm-3">
-            </block>
-            <block name="content">
-                <div id="content" class="col-sm-8">
-                </div>
-            </block>
-        </div>
-    </div><!-- /.container -->
-</div> <!--wrap,end-->
-<!--footer-->
-<include file="Index:footer" />
+    <!--导航-->
+    <include file="Index:navbar" />
+    <div id="wrap">
+        <block name="content"></block>
+    </div>
+    <!--footer-->
+    <include file="Index:footer" />
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <!--<script src="../../../../Public/js/jquery.min.js"></script>-->
 <!--<script src="../../../../Public/js/bootstrap.min.js"></script>-->
+
 <script src="__PUBLIC__/js/jquery.min.js"></script>
 <script src="__PUBLIC__/js/bootstrap.min.js"></script>
 </body>

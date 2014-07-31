@@ -96,12 +96,23 @@
     </div>
 
     <!--footer-->
-    <div id="footer">
+    <!--<div id="footer">
     <div class="container">
         this is a footer ,you can print something here
     </div>
+</div>-->
+<!--<footer>
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>© 2013 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>-->
+<div class="container marketing">
+    <hr class="featurette-divider">
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>© 2013 Company, Inc. · <a href="#">wcf</a> · <a href="#">Terms</a></p>
+    </footer>
 </div>
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

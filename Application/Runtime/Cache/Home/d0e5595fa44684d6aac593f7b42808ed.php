@@ -19,7 +19,6 @@
     <!--<link href="../../../../Public/css/starter-template.css" rel="stylesheet">-->
     <link href="/homecolor/Public/css/index/index.css" rel="stylesheet">
     <link href="/homecolor/Public/css/index/footer.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -30,7 +29,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">logo</a></li>
                 <li><a href="<?php echo U('Home/Index/index');?>"><?php echo L("home");?></a></li>
-                <li><a href="<?php echo U('Admin/Index/index');?>"><?php echo L('manage');?></a></li>
+                <li><a href="<?php echo U('Home/Login/index');?>"><?php echo L('manage');?></a></li>
                 <!--<li><a href="#">设置</a></li>-->
             </ul>
 
@@ -102,18 +101,28 @@
     </div><!-- /.container -->
 </div> <!--wrap,end-->
 <!--footer-->
-<div id="footer">
+<!--<div id="footer">
     <div class="container">
         this is a footer ,you can print something here
     </div>
+</div>-->
+<!--<footer>
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>© 2013 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>-->
+<div class="container marketing">
+    <hr class="featurette-divider">
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>© 2013 Company, Inc. · <a href="#">wcf</a> · <a href="#">Terms</a></p>
+    </footer>
 </div>
-
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <!--<script src="../../../../Public/js/jquery.min.js"></script>-->
 <!--<script src="../../../../Public/js/bootstrap.min.js"></script>-->
-
 <script src="/homecolor/Public/js/jquery.min.js"></script>
 <script src="/homecolor/Public/js/bootstrap.min.js"></script>
 </body>
