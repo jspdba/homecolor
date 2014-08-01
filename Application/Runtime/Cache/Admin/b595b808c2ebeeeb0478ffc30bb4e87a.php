@@ -45,6 +45,7 @@
                         <li><a href="<?php echo U('Admin/Soft/index');?>">删除</a></li>
                     </ul>
                 </li>
+                <li><a href="<?php echo U('Admin/Util/index');?>">导入csv文件</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
