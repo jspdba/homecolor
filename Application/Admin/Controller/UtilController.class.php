@@ -13,7 +13,8 @@ class UtilController extends AdminController{
 //        $content=file_get_contents($path);
 //        echo $content;
         $f=fopen($path,"r");
-        $topic=M("Topic");
+
+        //创建一张新表（冗余表）,只用来导入数据
         while(!feof($f)){
             $line=fgets($f);
         }

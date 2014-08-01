@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f37552c1-35f2-466c-a7bd-99e9742eec97" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/Controller/UtilController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/UtilController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/Conf/sql.sql" afterPath="$PROJECT_DIR$/Application/Admin/Conf/sql.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="homecolor.iws" />
@@ -25,13 +27,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IndexController.class.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/Craw/Controller/IndexController.class.php">
+      <file leaf-file-name="navbar.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Index/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="25" selection-start="80" selection-end="80" vertical-scroll-proportion="0.08166189" vertical-offset="0" max-vertical-offset="798">
+            <state line="8" column="27" selection-start="489" selection-end="489" vertical-scroll-proportion="-5.428571" vertical-offset="0" max-vertical-offset="988">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="74" selection-end="123" vertical-scroll-proportion="-2.0357144" vertical-offset="0" max-vertical-offset="969">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UtilController.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/UtilController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="28" selection-start="480" selection-end="480" vertical-scroll-proportion="-12.214286" vertical-offset="0" max-vertical-offset="513">
               <folding>
-                <element signature="e#33#54#0" expanded="true" />
+                <element signature="e#6#92#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sql.sql" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/Conf/sql.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="46" selection-start="808" selection-end="808" vertical-scroll-proportion="0.46597633" vertical-offset="274" max-vertical-offset="950">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,6 +104,11 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Index/base.html" />
         <option value="$PROJECT_DIR$/Application/Craw/View/Index/index.html" />
         <option value="$PROJECT_DIR$/Application/Craw/Controller/IndexController.class.php" />
+        <option value="$PROJECT_DIR$/Application/index.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Index/test.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Index/navbar.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/Controller/UtilController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/Conf/sql.sql" />
       </list>
     </option>
   </component>
@@ -111,7 +145,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -140,60 +173,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ThinkPHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="homecolor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="homecolor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThinkPHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="homecolor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="homecolor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThinkPHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="homecolor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="homecolor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -212,7 +191,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Craw" />
+              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -230,35 +209,81 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Craw" />
+              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homecolor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homecolor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Index" />
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homecolor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homecolor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistory" value="" />
+    <property name="SearchEverywhereHistory" value="&#10;/" />
+    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\homecolor\Application\Admin\Common" />
       <recent name="E:\xampp\htdocs\homecolor\ThinkPHP\Library\Vendor\Snoopy" />
       <recent name="E:\xampp\htdocs\homecolor\Application\Craw\Common" />
       <recent name="E:\xampp\htdocs\homecolor\Public\php" />
       <recent name="E:\xampp\htdocs\homecolor\Application" />
-      <recent name="E:\xampp\htdocs\homecolor\Application\Admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -312,7 +337,15 @@
       <created>1406797493548</created>
       <updated>1406797493548</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="comwork">
+      <created>1406797521270</created>
+      <updated>1406797521270</updated>
+    </task>
+    <task id="LOCAL-00009" summary="comwork   baidu.csv 导入">
+      <created>1406883215995</created>
+      <updated>1406883215995</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -323,9 +356,10 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15275995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1546855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -334,10 +368,9 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -355,7 +388,8 @@
     <MESSAGE value="no" />
     <MESSAGE value="yes" />
     <MESSAGE value="comwork" />
-    <option name="LAST_COMMIT_MESSAGE" value="comwork" />
+    <MESSAGE value="comwork   baidu.csv 导入" />
+    <option name="LAST_COMMIT_MESSAGE" value="comwork   baidu.csv 导入" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -363,10 +397,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Application/Craw/Controller/IndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="16" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="798">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Craw/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="28" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="969">
-          <folding>
-            <element signature="e#33#54#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -398,11 +437,6 @@
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="140" selection-start="739" selection-end="789" vertical-scroll-proportion="-8.142858" vertical-offset="0" max-vertical-offset="513" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Index/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Soft/index.html">
@@ -480,11 +514,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1159" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/LoginController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="379" selection-end="379" vertical-scroll-proportion="0.40830946" vertical-offset="0" max-vertical-offset="779" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Login/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="44" selection-start="242" selection-end="242" vertical-scroll-proportion="0.16332377" vertical-offset="0" max-vertical-offset="1615" />
@@ -497,37 +526,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="10" selection-start="115" selection-end="115" vertical-scroll-proportion="0.08166189" vertical-offset="0" max-vertical-offset="698">
-          <folding />
-        </state>
+        <state line="3" column="10" selection-start="115" selection-end="115" vertical-scroll-proportion="0.08166189" vertical-offset="0" max-vertical-offset="698" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="20" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.9799427" vertical-offset="0" max-vertical-offset="1083">
-          <folding />
-        </state>
+        <state line="36" column="20" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.9799427" vertical-offset="0" max-vertical-offset="1083" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Craw/Conf/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="2" selection-start="176" selection-end="176" vertical-scroll-proportion="0.16332377" vertical-offset="0" max-vertical-offset="698">
-          <folding />
-        </state>
+        <state line="6" column="2" selection-start="176" selection-end="176" vertical-scroll-proportion="0.16332377" vertical-offset="0" max-vertical-offset="698" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Craw/Controller/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="728">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Vendor/Snoopy/Snoopy.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="57" selection-start="843" selection-end="843" vertical-scroll-proportion="0.517192" vertical-offset="0" max-vertical-offset="19133">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="728" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/AdminController.class.php">
@@ -537,33 +551,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="35" selection-start="160" selection-end="160" vertical-scroll-proportion="0.13868614" vertical-offset="0" max-vertical-offset="969">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Craw/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="22" selection-start="104" selection-end="104" vertical-scroll-proportion="0.08166189" vertical-offset="0" max-vertical-offset="698">
-          <folding />
-        </state>
+        <state line="3" column="22" selection-start="104" selection-end="104" vertical-scroll-proportion="0.08166189" vertical-offset="0" max-vertical-offset="698" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Craw/View/Index/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="9" selection-start="853" selection-end="853" vertical-scroll-proportion="0.3739255" vertical-offset="195" max-vertical-offset="893">
+        <state line="24" column="9" selection-start="853" selection-end="853" vertical-scroll-proportion="0.3739255" vertical-offset="195" max-vertical-offset="893" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="23" selection-start="640" selection-end="640" vertical-scroll-proportion="0.16332377" vertical-offset="0" max-vertical-offset="698">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/ThinkPHP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="62" selection-start="2349" selection-end="2349" vertical-scroll-proportion="0.21489972" vertical-offset="686" max-vertical-offset="1767">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Common/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="500" column="22" selection-start="14899" selection-end="14905" vertical-scroll-proportion="0.3782235" vertical-offset="9084" max-vertical-offset="27645">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Craw/Controller/IndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="25" selection-start="80" selection-end="80" vertical-scroll-proportion="0.08166189" vertical-offset="0" max-vertical-offset="798">
+        <state line="54" column="33" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.58248174" vertical-offset="627" max-vertical-offset="2128">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Common/baidu.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="32" selection-start="844" selection-end="844" vertical-scroll-proportion="0.46142858" vertical-offset="0" max-vertical-offset="2736">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Vendor/Snoopy/Snoopy.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="35" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.9881129" vertical-offset="0" max-vertical-offset="19133">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="59145" selection-start="59145" selection-end="59145" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/LoginController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="28" selection-start="218" selection-end="218" vertical-scroll-proportion="0.19054441" vertical-offset="0" max-vertical-offset="779">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/SoftController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="1" selection-start="130" selection-end="130" vertical-scroll-proportion="0.108882524" vertical-offset="0" max-vertical-offset="1634">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Index/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="27" selection-start="489" selection-end="489" vertical-scroll-proportion="-5.428571" vertical-offset="0" max-vertical-offset="988">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="74" selection-end="123" vertical-scroll-proportion="-2.0357144" vertical-offset="0" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/UtilController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="28" selection-start="480" selection-end="480" vertical-scroll-proportion="-12.214286" vertical-offset="0" max-vertical-offset="513">
           <folding>
-            <element signature="e#33#54#0" expanded="true" />
+            <element signature="e#6#92#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Conf/sql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="46" selection-start="808" selection-end="808" vertical-scroll-proportion="0.46597633" vertical-offset="274" max-vertical-offset="950">
+          <folding />
         </state>
       </provider>
     </entry>

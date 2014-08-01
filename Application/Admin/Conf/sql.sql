@@ -30,3 +30,15 @@ CREATE TABLE IF NOT EXISTS `think_user` (
   `email` varchar(64) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+/**
+ * 存放csv文件
+ */
+
+CREATE TABLE IF NOT EXISTS `think_csv` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `topic` varchar(64) NOT NULL,
+  `name` varchar(64) NOT NULL,
+  `url` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
