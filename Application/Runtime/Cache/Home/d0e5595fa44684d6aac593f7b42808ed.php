@@ -85,14 +85,26 @@
  foreach ($list as $key => $value) { echo "<div class='container'>"; echo "<div class='row'>"; echo "<div class='col-md-3'>$value[name]</div>"; echo "<div class='col-md-3'>$value[url]</div>"; echo "<div class='col-md-3'>$value[cname]</div>"; echo "</div>"; echo "</div>"; } ?>
     </div>-->
     <div id="content" class="col-sm-8">
-        <div class="panel panel-primary">
+        <div class="panel panel-default">
             <div class="panel-heading"><?php echo ($topicName); ?></div>
             <div class="panel-body">
-                <div calss="container">
-                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$it): $mod = ($i % 2 );++$i;?><div class="row">
-                            <div class="col-lg-3"><a href="<?php echo ($it['url']); ?>"><i class="glyphicon glyphicon-floppy-save"></i>  <?php echo ($it['name']); ?></a></div>
-                        </div><?php endforeach; endif; else: echo "" ;endif; ?>
-                </div>
+                <!--<div calss="container">-->
+                    <!--<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$it): $mod = ($i % 2 );++$i;?>-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-lg-3"><a href="<?php echo ($it['url']); ?>" target="_blank"><i class="glyphicon glyphicon-floppy-save"></i>  <?php echo ($it['name']); ?></a></div>-->
+                        <!--</div>-->
+                    <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
+                <!--</div>-->
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>序号</td><td>软件名称</td>
+                    </tr>
+                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$it): $mod = ($i % 2 );++$i;?><tr>
+                            <td><?php echo ($i); ?></td>
+                            <td><a href="<?php echo ($it['url']); ?>" target="_blank"><i class="glyphicon glyphicon-floppy-save"></i>  <?php echo ($it['name']); ?></a></td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                </table>
             </div>
         </div>
      </div>

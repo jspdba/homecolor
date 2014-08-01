@@ -21,16 +21,28 @@
         ?>
     </div>-->
     <div id="content" class="col-sm-8">
-        <div class="panel panel-primary">
+        <div class="panel panel-default">
             <div class="panel-heading">{$topicName}</div>
             <div class="panel-body">
-                <div calss="container">
-                    <volist name="list" id="it">
-                        <div class="row">
-                            <div class="col-lg-3"><a href="{$it['url']}"><i class="glyphicon glyphicon-floppy-save"></i>  {$it['name']}</a></div>
-                        </div>
+                <!--<div calss="container">-->
+                    <!--<volist name="list" id="it">-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-lg-3"><a href="{$it['url']}" target="_blank"><i class="glyphicon glyphicon-floppy-save"></i>  {$it['name']}</a></div>-->
+                        <!--</div>-->
+                    <!--</volist>-->
+                <!--</div>-->
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>序号</td><td>软件名称</td>
+                    </tr>
+                    <volist name="list" id="it" key="i">
+                        <tr>
+                            <td>{$i}</td>
+                            <td><a href="{$it['url']}" target="_blank"><i class="glyphicon glyphicon-floppy-save"></i>  {$it['name']}</a></td>
+                        </tr>
                     </volist>
-                </div>
+                </table>
             </div>
         </div>
      </div>
