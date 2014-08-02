@@ -5,5 +5,6 @@ return array(
     'topics'=>'topics',
     'xuhao'=>'id',
     'name'=>'soft name',
+    'lang'=>'Lang',
 );
 ?>

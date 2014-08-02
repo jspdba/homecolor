@@ -35,6 +35,14 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#"> <?php echo L("lang");?> <i class="caret"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="?l=zh-cn">中文</a></li>
+                        <li><a href="?l=en-us">English</a></li>
+                        <li><a href="?l=ja-jp">日本语</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#"><i class="glyphicon glyphicon-user"></i> <?php echo (session('username')); ?> <i class="caret"></i>
                     </a>
                     <ul class="dropdown-menu">

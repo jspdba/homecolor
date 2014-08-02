@@ -5,10 +5,19 @@
                 <li class="active"><a href="#">logo</a></li>
                 <li><a href="{:U('Home/Index/index')}">{:L("home")}</a></li>
                 <li><a href="{:U('Home/Login/index')}">{:L('manage')}</a></li>
+                <li><a href="{:U('Craw/Index/index')}">投票临时链接</a></li>
                 <!--<li><a href="#">设置</a></li>-->
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#"> {:L("lang")} <i class="caret"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="?l=zh-cn">中文</a></li>
+                        <li><a href="?l=en-us">English</a></li>
+                        <li><a href="?l=ja-jp">日本语</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#"><i class="glyphicon glyphicon-user"></i> {$Think.session.username} <i class="caret"></i>
                     </a>

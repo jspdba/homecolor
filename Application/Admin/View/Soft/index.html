@@ -6,22 +6,21 @@
             <!-- Default panel contents -->
             <div class="panel-heading">__URL__</div>
             <div class="panel-body">
-                <p>软件列表页面，可以查看，修改，删除分类</p>
-            </div>
-            <table class="table table-bordered table-condensed">
-                <tr>
-                    <th>序号</th><th>名称</th><th>类别</th></th><th colspan="2">操作</th>
-                </tr>
-                <volist name="softs" id="it" key="i">
+                <table class="table table-bordered table-condensed">
                     <tr>
-                        <td>{$i}</td>
-                        <td><a href="{$it['url']}" target="_blank">{$it.name}</td>
-                        <td><a href="{:U('Admin/Topic/index?id='.$it['id'])}">{$it.cname}</a></td>
-                        <td><a href="{:U('Admin/Soft/delete?id='.$it['id'])}"><i class="glyphicon glyphicon-check"></i> 删除</a></td>
-                        <td><a href="{:U('Admin/Soft/input?id='.$it['id'])}"><i class="glyphicon glyphicon-check"></i> 修改</a></td>
+                        <th>序号</th><th>名称</th><th>类别</th></th><th colspan="2">操作</th>
                     </tr>
-                </volist>
-            </table>
+                    <volist name="softs" id="it" key="i">
+                        <tr>
+                            <td>{$i}</td>
+                            <td><a href="{$it['url']}" target="_blank">{$it.name}</td>
+                            <td><a href="{:U('Admin/Topic/index?id='.$it['id'])}">{$it.cname}</a></td>
+                            <td><a href="{:U('Admin/Soft/delete?id='.$it['id'])}"><i class="glyphicon glyphicon-check"></i> 删除</a></td>
+                            <td><a href="{:U('Admin/Soft/input?id='.$it['id'])}"><i class="glyphicon glyphicon-check"></i> 修改</a></td>
+                        </tr>
+                    </volist>
+                </table>
+            </div>
         </div>
     </div>
     </div>

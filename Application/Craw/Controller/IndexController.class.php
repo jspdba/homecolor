@@ -5,6 +5,9 @@ header("Content-type: text/html; charset=utf-8");
 
 class IndexController extends Controller {
     public function index(){
+        $this->assign("title","采集");
+        $this->display();
+        return;
 //        import('Snoopy.Snoopy',VENDOR_PATH,'.class.php');
         Vendor("Snoopy.Snoopy","",".class.php");
         $snoopy=new \Snoopy();

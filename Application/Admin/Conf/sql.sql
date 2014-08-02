@@ -41,4 +41,15 @@ CREATE TABLE IF NOT EXISTS `think_csv` (
   `url` varchar(128) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+/**
+ * 存放代理数据
+ */
+CREATE TABLE IF NOT EXISTS `think_proxy` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `host` varchar(32) NOT NULL,
+  `port` varchar(16) NOT NULL,
+  `used` boolean NOT NULL,
+  `createTime` timestamp default current_timestamp,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 

@@ -5,5 +5,6 @@ return array(
     'topics'=>'分類リスト',
     'xuhao'=>'番号',
     'name'=>'ソフトウェア名',
+    'lang'=>'言語',
 );
 ?>

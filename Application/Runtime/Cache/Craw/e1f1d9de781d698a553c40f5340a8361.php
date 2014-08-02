@@ -28,22 +28,9 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">logo</a></li>
-                <li><a href="<?php echo U('Admin/Index/index');?>">首页</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">分类管理<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="<?php echo U('Admin/Topic/index');?>">展示</a></li>
-                        <li><a href="<?php echo U('Admin/Topic/input');?>">增加</a></li>
-                        <li><a href="<?php echo U('Admin/Topic/index');?>">删除</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">软件管理<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="<?php echo U('Admin/Soft/index');?>">展示</a></li>
-                        <li><a href="<?php echo U('Admin/Soft/input');?>">增加</a></li>
-                        <li><a href="<?php echo U('Admin/Soft/index');?>">删除</a></li>
-                    </ul>
+                <li><a href="<?php echo U('Home/Index/index');?>">首页</a></li>
+                <li>
+                    <a href="#" onclick="toupiao()">投票</a>
                 </li>
             </ul>
 
@@ -69,6 +56,8 @@
 </nav>
     <div id="wrap">
         
+    <div class="container" id="content">
+    </div>
 
     </div>
     <!--footer-->
@@ -86,5 +75,22 @@
 
 <script src="/homecolor/Public/js/jquery.min.js"></script>
 <script src="/homecolor/Public/js/bootstrap.min.js"></script>
+
+    <script>
+        function toupiao(){
+            $("#content").html("正在投票...");
+            $.getJSON("<?php echo U('Craw/caiji/toupiao');?>",function(data){
+                if(data.indexOf!="0"){
+                    $("#content").html(data);
+                }
+                var html="标志="+data.error+",消息="+data.result+",数据库剩余="+data.dbCount;
+//                if(data.indexOf("{")!=0){
+//                    html=data;
+//                }
+                $("#content").html(html);
+            });
+        }
+    </script>
+
 </body>
 </html>
