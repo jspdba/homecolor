@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f37552c1-35f2-466c-a7bd-99e9742eec97" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/verify0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Craw/3eae4505c19f8621afd7c04e468b523a.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Craw/View/Gjjx/Index.html" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\homecolor\Application\Runtime\Cache\Admin\32ec6c906c117a7c2bf504769276d87a.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\homecolor\Application\Runtime\Cache\Admin\53c7dfdcc1f02a0627bb3774a73a4ec6.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\homecolor\Application\Runtime\Cache\Admin\8e356ceaab9d19bb9bea96110f01e73d.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\homecolor\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\homecolor\Application\Runtime\Cache\Craw\e1f1d9de781d698a553c40f5340a8361.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\homecolor\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\homecolor\Application\Runtime\Cache\Home\5b6adcb62ad2b5dfc2abc2cd5e11dc99.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\homecolor\Application\Runtime\Cache\Home\d0e5595fa44684d6aac593f7b42808ed.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/css/index/footer.css" afterPath="$PROJECT_DIR$/Public/css/index/footer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Index/index.bak.html" afterPath="$PROJECT_DIR$/Application/Home/View/Index/index.bak.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Craw/View/Index/index.html" afterPath="$PROJECT_DIR$/Application/Craw/View/Index/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/View/Index/navbar.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Index/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Craw/View/Index/navbar.html" afterPath="$PROJECT_DIR$/Application/Craw/View/Index/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Index/navbar.html" afterPath="$PROJECT_DIR$/Application/Home/View/Index/navbar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Lang/zh-cn.php" afterPath="$PROJECT_DIR$/Application/Home/Lang/zh-cn.php" />
     </list>
     <ignored path="homecolor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -352,7 +334,11 @@
       <created>1407070422723</created>
       <updated>1407070422723</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="homework 修改 php验证码">
+      <created>1407070458359</created>
+      <updated>1407070458359</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
