@@ -10,9 +10,10 @@
         function toupiao(){
             $("#content").html("正在投票...");
             $.getJSON("{:U('Craw/caiji/toupiao')}",function(data){
-                if(data.indexOf!="0"){
-                    $("#content").html(data);
-                }
+//                if(data.indexOf("{") != 0){
+//                    alert(data)
+//                    $("#content").html(""+data);
+//                }
                 var html="标志="+data.error+",消息="+data.result+",数据库剩余="+data.dbCount;
 //                if(data.indexOf("{")!=0){
 //                    html=data;
