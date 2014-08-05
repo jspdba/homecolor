@@ -10,16 +10,15 @@ use Think\Controller;
 Vendor("Snoopy.Snoopy","",".class.php");
 header("Content-type: text/html; charset=utf-8");
 class GjjxController extends Controller {
-
     public function index(){
-        $id=5797069;
+//        $id=5797069;
         //登录状态查询http://www.gjjx.com.cn/member/status
         $snoopy=$this->getSnoopy();
-        $mycookie=$this->getLoginCookie($snoopy);
-        $this->setCookie($mycookie);
-
+        $this->getVerifyCookie($snoopy);
         $v0="./Public/verify0.jpg";
-        $this->getVerify($snoopy,$mycookie,$v0);
+        $this->getVerify($snoopy,$v0);
+        $this->getVerify($snoopy,$v0);
+        $this->getVerify($snoopy,$v0);
         $this->display();
     }
     public function execoo(){
@@ -51,48 +50,56 @@ class GjjxController extends Controller {
 //        $snoopy=new \Snoopy();
         $snoopy=$this->getSnoopy();
 //        $snoopy->fetchtext($uri);
-        $snoopy->rawheaders["cookie"]="SESS009f3c71e51fefafc0101f44ac6f18d6=2_UuI37qWXlorkSXF3b6rZ2lzJvhaTV0pTmiTE58zDw; CNZZDATA5797069=cnzz_eid%3D51168006-1407128495-http%253A%252F%252Fwww.gjjx.com.cn%252F%26ntime%3D1407128495";
-        $snoopy->fetchtext($uri);
-//        $snoopy->fetchlinks($uri);
+        $snoopy->rawheaders["cookie"]=" SESS009f3c71e51fefafc0101f44ac6f18d6=EMSsc3F4Pp9XrRvU0zhavd3Iqd0PUdF4sLIrfw7bdG4;";
+//        $snoopy->fetchtext($uri);
+//        $snoopy->fetch($uri);
+        $snoopy->fetchlinks($uri);
         $res=$snoopy->results;
-        echo $res;
-//        dump( $res);
-    }
-
-    private function getLoginCookie($snoopy){
-        $uri="http://www.gjjx.com.cn/login";
-        $snoopy->fetch($uri);
-        $snoopy->setcookies();
-        $cookies=$snoopy->cookies;
-        echo "=================cookie==================="."<br>";
-            dump($cookies);
-            foreach($cookies as $key=>$value){
-                echo "<br>".$key."=".$value."<br>";
+//        echo $res;
+        dump( $res);
+        $code="/member/training/asterncar";
+//        echo $res;
+//        dump($res);
+        $count=0;
+        foreach($res as $key=>$value){
+            if(strstr($code,$value)){
+                $count++;
+               echo "<a src=\"".$value."\"</a><br>";
             }
-        echo "=================cookie==================="."<br>";
-
-        $this->setcookie($cookies);
-        return $cookies;
+        }
+        if($count==0){
+            echo "没有约车数据！！";
+        }
     }
 
-    private function getVerify($snoopy,$mycookie,$name){
-        //设置cookie
-//        $snoopy->rawheaders["COOKIE"]= $mycookie;
-        $verify="http://www.gjjx.com.cn/member/captcha/0.21266968157853705";
-
+    private function getVerifyCookie($snoopy){
+        $verify="http://www.gjjx.com.cn/member/captcha";
         $snoopy->fetch($verify);
         $snoopy->setcookies();
-        $cookies = $snoopy->cookies;
+        $cookies=$snoopy->cookies;
+//        echo "=================cookie==================="."<br>";
+//            foreach($cookies as $key=>$value){
+//                echo "<br>".$key."=".$value."<br>";
+//            }
+//        echo "=================cookie==================="."<br>";
+//        echo $cookies['SESS009f3c71e51fefafc0101f44ac6f18d6'];//session
+        cookie($cookies);
+        dump($cookies);
+    }
 
-        $this->setCookie($cookies); //先保存cookie吧
-
-        echo "====cookie======"."<br >";
-        foreach($cookies as $key=>$value){
-            echo $key."=".$value;
-        }
-        echo "<br>"."====cookie======";
-
+    private function getVerify($snoopy,$name){
+        //设置cookie
+        $snoopy->rawheaders["cookie"]= cookie("SESS009f3c71e51fefafc0101f44ac6f18d6");
+        $random=mt_rand(0,100) /100;
+//        $verify="http://www.gjjx.com.cn/member/captcha/".$random;
+        $verify="http://www.gjjx.com.cn/member/captcha";
+        $snoopy->fetch($verify);
         $res=$snoopy->results;
+        $snoopy->setcookies();
+        $cookies=$snoopy->cookies;
+        dump($cookies);
+
+        cookie($cookies);
         //生成图像
         $im = imagecreatefromstring($res);
         if ($im !== false) {
@@ -126,30 +133,28 @@ class GjjxController extends Controller {
 
     public function  loginForm(){
 //        $snoopy=new \Snoopy();
-        $snoopy=$this->getSnoopy();
-        $cookies=$this->getCookies();
-        //snoopy setcookie
-//        foreach($cookies as $key=>$value){
-////            $snoopy->rawheaders["COOKIE"]=;
-//        }
-       $snoopy->rawheaders["COOKIE"]=$cookies;
-       $uri="http://www.gjjx.com.cn/member/login?hash=0.44259767997799215";
+       $snoopy=$this->getSnoopy();
+       $snoopy->rawheaders["COOKIE"]=cookie('SESS009f3c71e51fefafc0101f44ac6f18d6');
+        dump(cookie('SESS009f3c71e51fefafc0101f44ac6f18d6'));
+       $uri="http://www.gjjx.com.cn/member/login";
+       $username=I('username');
+       $password=I('password');
+       $captcha=I('captcha');
+        echo $username."<br>";
+        echo $password."<br>";
+        echo $captcha."<br>";
+        $data=array(
+            'username'=>$username,
+            'password'=>$password,
+            'captcha'=>$captcha,
+        );
        $snoopy->submit($uri,$_POST);
        $res=$snoopy->results;
        echo $res;
+        $snoopy->setcookies();
+        dump($snoopy->cookies);
     }
 
-    private function setCookie($cookies){
-        foreach($cookies as $key=>$value){
-            cookie($key,$value);
-            echo "<br>"."cookie:".$key."=".$value."<br>";
-        }
-        cookie("CNZZDATA5797069","cnzz_eid%3D812014887-1407118446-http%253A%252F%252Fwww.gjjx.com.cn%252F%26ntime%3D1407118446");
-    }
-
-    private function  getCookies(){
-       return  $value = cookie("SESS009f3c71e51fefafc0101f44ac6f18d6");
-    }
     //执行script脚本
     private function  execJs($js){
         echo "<script>".$js."</script>";
