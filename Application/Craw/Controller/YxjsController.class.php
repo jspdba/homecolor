@@ -16,6 +16,17 @@ class YxjsController extends Controller {
         $snoopy->maxredirs = 2;
         $snoopy->offsiteok = false;
         $snoopy->expandlinks=true;
+
+        $proxy=M('Proxy');
+        $proxy->field("host,port")->where("used=1")->find();
+        if(!$proxy){
+            echo "eror daili null";
+            $this->display();
+        }else{
+            dump($proxy);
+        }
+        $snoopy->proxy_port=$proxy->port;
+        $snoopy->proxy_host=$proxy->host;
         $snoopy->referer="http://www.njxjyj.com/yxjs";
         $snoopy->passcookies=true;
         //        $snoopy->rawheaders["COOKIE"]="CNZZDATA5797069=cnzz_eid%3D812014887-1407118446-http%253A%252F%252Fwww.gjjx.com.cn%252F%26ntime%3D1407118446";
@@ -66,17 +77,26 @@ class YxjsController extends Controller {
         $uri="http://www.njxjyj.com/yxjs/vote.asp";
         $snoopy->rawheaders["COOKIE"]=cookie("ASPSESSIONIDQQSRQSQB");
         $snoopy->rawheaders["Origin"]="http://www.njxjyj.com";
+        $proxy=M('Proxy');
+        $proxy->field("host,port")->where("used=1")->find();
+        if(!$proxy){
+            echo "eror daili null";
+            $this->display();
+        }
+        $snoopy->proxy_port=$proxy->port;
+        $snoopy->proxy_host=$proxy->host;
 //        .add("imageField.x", "84")
 //        .add("imageField.y", "37")
 
         $code=I("code");
-        $formvars["code"] = $code;
+//        $formvars["code"] = $code;
+        $formvars["code"] = "ASPSESSIONIDQSTTSRQA=MFAGNOBAHEBMPDNOOICBFOJC; ASPSESSIONIDCQQSTTSD=DAPFFBCAAHABLLDFHFHEEIDM;";
         $formvars["id"] = "111";
         $formvars["t"] = "1";
         $formvars["imageField.x"] = "84";
         $formvars["imageField.y"] = "37";
 
-        $snoopy->submit($uri,$formvars,"");
+        $snoopy->submit($uri,$formvars);
         $res=$snoopy->results;
         dump($res);
     }
