@@ -1,0 +1,112 @@
+[ 2014-08-09T21:04:22+08:00 ] 127.0.0.1 /homecolor/craw/server
+ERR: User-agent=Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+Content-Length=285
+Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Host=localhost
+Connection=Keep-Alive
+Accept-Encoding=gzip,deflate
+goto=http://115.com/
+login=Array
+
+[ 2014-08-09T21:04:22+08:00 ] 127.0.0.1 /homecolor/craw/server
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-08-09T21:05:21+08:00 ] 127.0.0.1 /homecolor/craw/server
+ERR: User-agent=Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+Content-Length=285
+Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Host=localhost
+Connection=Keep-Alive
+Accept-Encoding=gzip,deflate
+goto=http://115.com/
+login=Array
+
+[ 2014-08-09T21:05:21+08:00 ] 127.0.0.1 /homecolor/craw/server
+ERR: 2
+[ 2014-08-09T21:05:21+08:00 ] 127.0.0.1 /homecolor/craw/server
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-08-09T21:07:48+08:00 ] 127.0.0.1 /homecolor/craw/server
+ERR: User-agent=Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+Content-Length=285
+Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Host=localhost
+Connection=Keep-Alive
+Accept-Encoding=gzip,deflate
+============post=======
+goto=http://115.com/
+login=Array
+
+[ 2014-08-09T21:07:48+08:00 ] 127.0.0.1 /homecolor/craw/server
+ERR: 2
+[ 2014-08-09T21:07:48+08:00 ] 127.0.0.1 /homecolor/craw/server
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-08-09T21:11:37+08:00 ] 127.0.0.1 /homecolor/Craw/Server
+ERR: Host=localhost
+User-Agent=Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0
+Accept=text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language=zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+Accept-Encoding=gzip, deflate
+Cookie=thinkphp_show_page_trace=0|0; PHPSESSID=h6d61u5m780j0ndcq9kdmvgoq2
+Connection=keep-alive
+Cache-Control=max-age=0
+============post=======
+
+[ 2014-08-09T21:11:37+08:00 ] 127.0.0.1 /homecolor/Craw/Server
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-08-09T21:20:48+08:00 ] 127.0.0.1 /homecolor/craw/server
+ERR: User-agent=Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+Content-Length=285
+Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Host=localhost
+Connection=Keep-Alive
+Accept-Encoding=gzip,deflate
+============post=======
+goto=http://115.com/
+login=Array
+
+[ 2014-08-09T21:20:48+08:00 ] 127.0.0.1 /homecolor/craw/server
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-08-09T21:22:40+08:00 ] 127.0.0.1 /homecolor/craw/server
+ERR: User-agent=Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+Host=localhost
+Connection=Keep-Alive
+Accept-Encoding=gzip,deflate
+============post=======
+
+[ 2014-08-09T21:22:40+08:00 ] 127.0.0.1 /homecolor/craw/server
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-08-09T21:22:40+08:00 ] 127.0.0.1 /homecolor/craw/server
+ERR: User-agent=Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+Content-Length=285
+Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Host=localhost
+Connection=Keep-Alive
+Cookie=PHPSESSID=73puave20csja9667a023ee7u0
+Cookie2=$Version=1
+Accept-Encoding=gzip,deflate
+============post=======
+goto=http://115.com/
+login=Array
+
+[ 2014-08-09T21:22:40+08:00 ] 127.0.0.1 /homecolor/craw/server
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+

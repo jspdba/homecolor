@@ -377,7 +377,7 @@ class FirePHP {
     /**
      * Firebug LOG level
      *
-     * Logs a message to firebug console.
+     * Log a message to firebug console.
      * 
      * @var string
      */
@@ -386,7 +386,7 @@ class FirePHP {
     /**
      * Firebug INFO level
      *
-     * Logs a message to firebug console and displays an info icon before the message.
+     * Log a message to firebug console and displays an info icon before the message.
      * 
      * @var string
      */
@@ -395,7 +395,7 @@ class FirePHP {
     /**
      * Firebug WARN level
      *
-     * Logs a message to firebug console, displays an warning icon before the message and colors the line turquoise.
+     * Log a message to firebug console, displays an warning icon before the message and colors the line turquoise.
      * 
      * @var string
      */
@@ -404,7 +404,7 @@ class FirePHP {
     /**
      * Firebug ERROR level
      *
-     * Logs a message to firebug console, displays an error icon before the message and colors the line yellow. Also increments the firebug error count.
+     * Log a message to firebug console, displays an error icon before the message and colors the line yellow. Also increments the firebug error count.
      * 
      * @var string
      */
@@ -758,7 +758,7 @@ class FirePHP {
     /**
      * FirePHP's exception handler
      * 
-     * Logs all exceptions to your firebug console and then stops the script.
+     * Log all exceptions to your firebug console and then stops the script.
      *
      * @param Exception $Exception
      * @throws Exception
@@ -800,7 +800,7 @@ class FirePHP {
     /**
      * FirePHP's assertion handler
      *
-     * Logs all assertions to your firebug console and then stops the script.
+     * Log all assertions to your firebug console and then stops the script.
      *
      * @param string $file File source of assertion
      * @param int    $line Line source of assertion

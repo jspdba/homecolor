@@ -10,9 +10,9 @@ use Think\Controller;
 Vendor("Snoopy.Snoopy","",".class.php");
 header("Content-type: text/html; charset=gb2312");
 
-class YxjsController extends Controller {
+class Pan115Controller extends Controller {
     public function index(){
-//        session(null);
+
         $snoopy=new \Snoopy();
         $snoopy->maxredirs = 3;
         $snoopy->maxframes=2;
@@ -20,67 +20,33 @@ class YxjsController extends Controller {
         $snoopy->expandlinks=true;
         $snoopy->read_timeout=10;
 
-        //mysql:table.proxy
-        $proxy=$this->getProxyAutoFetch();
-        if(sizeof($proxy)==0){
-            echo "proxy error ,there is no proxy, returned!!";
-            return ;
-        }else{
-            dump($proxy);
-        }
-        $snoopy->proxy_host=$proxy['host'];
-        $snoopy->proxy_port=$proxy['port'];
-
-        $snoopy->referer="http://www.njxjyj.com/yxjs";
         $snoopy->passcookies=true;
         //        $snoopy->rawheaders["COOKIE"]="CNZZDATA5797069=cnzz_eid%3D812014887-1407118446-http%253A%252F%252Fwww.gjjx.com.cn%252F%26ntime%3D1407118446";
         //        $snoopy->agent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; TheWorld)";
         $snoopy->agent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36";
-//        $snoopy->rawheaders["Accept"]= "image/webp,*/*;q=0.8";
-        $snoopy->accept="image/webp,*/*;q=0.8";
         //下载验证
-        $uri="http://www.njxjyj.com/yxjs/code.asp";
+        $uri="http://www.115.com/?goto=http%3A%2F%2F115.com%2F";
 
         echo "fetch=".$uri;
 
-        $snoopy->fetch($uri);
+        $snoopy->fetchform($uri);
         $res=$snoopy->results;
+        dump($res);
         $snoopy->setcookies();
         $cookies=$snoopy->cookies;
         $keys=array();
-        $cnt=0;
         foreach($cookies as $key=>$value){
             session($key,$value);//放到session里，以免混杂cookie
             //实践证明，最多有一个cookie所以这里从简
             $keys[$cnt]=$key;
             cookie($key,$value);
             echo "<br>"."cookie:".$key."=".$value."<br>";
-            $cnt++;
         }
-        session("keys",$keys);
-
-        //生成图像
-        $name="./Public/verify0.bmp";
-
-        $file_pointer = fopen($name,"w");
-        fwrite($file_pointer,$res);
-        fclose($file_pointer);
-        /*$im = imagecreatefromstring($res);
-        if ($im !== false) {
-            //            header('Content-Type: image/jpeg');
-            image2wbmp($im,$name);
-//            imagejpeg($im,$name);
-            imagedestroy($im);
-        }else{
-            echo "error";
-        }*/
-        $this->display();
+        
+        // $this->display();
     }
     public function  vote(){
-        echo "vote";
-        return;
         $uri="http://www.njxjyj.com/yxjs/vote.asp";
-
         $snoopy=new \Snoopy();
         $snoopy->maxredirs = 5;
         $snoopy->maxframes=2;
